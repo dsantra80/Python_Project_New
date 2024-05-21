@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  web:
+    image: ${DOCKER_USERNAME}/flask-gradientai-app:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - GRADIENTAI_API_URL=${GRADIENTAI_API_URL}
